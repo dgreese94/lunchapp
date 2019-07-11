@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load customerfilters %}
+{% block content %}
+  <div class='row border m-5 p-5'>
+    <div class='col'>
+      <h1>Who is Picking Lunch?</h1>
+    </div>
+    <div class='col'>
+      <a class="btn btn-primary" href="{% url 'results' %}">Let's find out</a>
+    </div>
+  </div>
+  <div class='row p-1'>
+    <h3>Odds</h3>
+    <table class='table table-dark table-striped'>
+      <tr>
+        <th>Name</th>
+        <th>Weight</th>
+      </tr>
+      {% for person, weight in data.iteritems %}
+        <tr>
+          <td>{{ person.name }}</td>
+          <td>{{ weight|to_percent }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock content %}
