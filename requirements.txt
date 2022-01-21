@@ -4,7 +4,7 @@ decorator==4.4.0
 Django==1.11.21
 django-bootstrap4==0.0.8
 enum34==1.1.6
-ipython==5.8.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 numpy==1.16.4
 pathlib2==2.3.3
